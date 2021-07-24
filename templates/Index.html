@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Level Classification</title>
+    <link rel="stylesheet" href="../static/Style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<section>
+    <div class="side">
+        <img src="{{url_for('static', filename='vikas.jpeg')}}" width="350px" height="350px">
+        <h2>Project: Income Level Classification</h2>
+        <h2>Using Machine Learning, Python, Flask</h2>
+
+        <h2>Made By Vikas</h2>
+    </div>
+    <div class="vl"></div>
+    <div class="main">
+            <h1>Machine Learning App with Flask</h1>
+            <h3>Enter Your Details</h3>
+            <form action="/predict" method="POST">
+
+                <br/>
+                <h3>Enter Age of Person </h3>
+                <input type="number" class="form-control" id="age" name="age" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter Hours Of Person That Has Reported To Work Per Week </h3>
+                <input type="number" step=any class="form-control" id="hours_per_week" name="hours_per_week" placeholder="For example, 7hour 30 min = 7.30" required="required">
+                <br/>
+
+                <h3>Enter Highest Level Of Education Achieved By Person </h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="education">
+                <option value="Bachelors">Bachelors</option>
+                <option value="Some-college">Some-college</option>
+                <option value="11th">11th</option>
+                <option value="HS-grad">HS-grad</option>
+                <option value="Prof-school">Prof-school</option>
+                <option value="Assoc-acdm">Assoc-acdm</option>
+                <option value="Assoc-voc">Assoc-voc</option>
+                <option value="9th">9th</option>
+                <option value="7th-8th">7th-8th</option>
+                <option value="12th">12th</option>
+                <option value="Masters">Masters</option>
+                <option value="1st-4th">1st-4th</option>
+                <option value="10th">10th</option>
+                <option value="Doctorate">Doctorate</option>
+                <option value="5th-6th">5th-6th</option>
+                <option value="Preschool">Preschool</option>
+                </select>
+
+                <h3>Enter Marital Status Of Person </h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="marital_status">
+                <option value="Married-civ-spouse">Married-civ-spouse</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Never-married">Never-married</option>
+                <option value="Separated">Separated</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Married-spouse-absent">Married-spouse-absent</option>
+                <option value="Married-AF-spouse">Married-AF-spouse</option>
+                </select>
+
+                <h3>Enter Type Of Occupation Of Person </h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="occupation">
+                <option value="Tech-support">Tech-support</option>
+                <option value="Craft-repair">Craft-repair</option>
+                <option value="Other-service">Other-service</option>
+                <option value="Sales">Sales</option>
+                <option value="Exec-managerial">Exec-managerial</option>
+                <option value="Prof-specialty">Prof-specialty</option>
+                <option value="Handlers-cleaners">Handlers-cleaners</option>
+                <option value="Machine-op-inspct">Machine-op-inspct</option>
+                <option value="Adm-clerical">Adm-clerical</option>
+                <option value="Farming-fishing">Farming-fishing</option>
+                <option value="Transport-moving">Transport-moving</option>
+                <option value="Priv-house-serv">Priv-house-serv</option>
+                <option value="Protective-serv">Protective-serv</option>
+                <option value="Armed-Forces">Armed-Forces</option>
+                </select>
+
+                <h3>Enter Biological Sex Of Person </h3>
+                <select class="form-select form-select-md mb-3" aria-label=".form-select-lg example" name="sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
+
+                <input type="submit" class="btn-info" value="Predict">
+            </form>
+    </div>
+</section>
+</body>
+</html>
